@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'twayair';
+}
+
+body{
+    background-color: pink;
+}
+
+#container{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin: 60px 580px;
+    width:60vh;
+    height:80vh;
+    text-align:center;
+    border-radius:15px;
+}
+
+#name{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -70px;
+}
+
+#calling{ 
+    border:none;
+    font-size: 50px;
+}
+
+.fas{
+    background-color: green;
+    border-radius: 30px;
+}
+
+#calling:hover{
+    background:white;
+    border: none;
+    border-radius: 20px;
+    color:salmon;
+}

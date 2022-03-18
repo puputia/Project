@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'HSYuji-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{    
+    width: 400px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+ 
+
+.pou{
+   margin-left: -180px; 
+}
+
+.container button{
+    background-color: rgb(67, 223, 171);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'HSYuji-Regular';
+}

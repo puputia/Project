@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script lang="javascript">
+        function check_text() {
+        var value = document.getElementById("console").value;
+    if(value == "나가기"){
+		alert("정말 나갈꼬얌? ｡ﾟ(ﾟ´ω`ﾟ)ﾟ｡");
+	}
+	else{
+		console.log(value);
+	}
+    }
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Day11 챗봇 만들기 1일차</title>
+</head>
+<body>
+    <div class="layout">
+        <div class="loopy_says">
+            어서와! 루피랑 얘기하자:)
+        </div>
+        <div class="loopy">
+            <img class="icon" src="https://i.pinimg.com/originals/53/de/70/53de70172685637e8d9a094928ad4f4b.png">
+        </div>
+        <div class="input_layout">
+            <input type="text" id="console" class="input_style">
+        </div>
+        <div class="button" onclick=check_text()>
+            말걸기
+        </div>
+    </div>
+</body>
+</html>

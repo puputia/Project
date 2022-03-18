@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p { 
+    font-family: "Vitro_core", serif;
+   font-size: 40px;
+   text-shadow: 2px 4.5px 2px gray;
+   margin: 20px  
+}
+
+button {
+    font-family: "SDSamliphopangche_Outline", serif;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    margin:20px 10px;
+    padding:20px;
+    background-color:rgb(193, 216, 243);
+    color: black;
+}

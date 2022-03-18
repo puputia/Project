@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>💗전광판 만들기💗</title>
+    <script language="javascript">
+        let Word = "수고했어오늘도!";
+        let count = 0;
+        let color = ['indianred','royalblue','forestgreen','palevioletred','darkorange','mediumorchid']
+        function showName(){
+            if(count >= Word.length){
+                return;
+            }
+            document.getElementsByClassName('name')[0].innerHTML += Word[count];
+            document.getElementsByClassName('name')[0].style.color = color[count++];
+        }
+    </script>
+</head>
+<body>
+    <h1 class='name'></h1>
+    <button class="btn" onclick=showName()>전광판 버튼</button> 
+</body>
+</html>

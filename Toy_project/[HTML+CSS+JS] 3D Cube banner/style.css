@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1f1f1f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    perspective: 1000px;
+}
+
+.cube{
+    width:128px;
+    height:128px;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+.cube img{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.cube img:nth-child(1){
+    transform: translateZ(64px);
+}
+
+.cube img:nth-child(2){
+    transform: rotateX(90deg) translateZ(64px);
+}
+
+.cube img:nth-child(3){
+    transform: rotateX(180deg) translateZ(64px);
+}
+
+.cube img:nth-child(4){
+    transform: rotateX(270deg) translateZ(64px);
+}
+ 

@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'BinggraeSamanco-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.layout{ 
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.loopy {
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+.loopy_says {
+    width: 450px;
+    height: 120px;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 30px;
+    margin: auto;
+    border-radius: 5px;
+    border: solid 2px #000000;
+}
+  
+.button {
+    font-family: 'BinggraeSamanco-Bold';
+    width: 150px;
+    background: #ff96c7;
+    border-radius: 100px;
+    padding: 20px 60px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+  
+.input_style {
+    width: 312px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: gray;
+    border: none;
+    margin-top: 7px;
+    border: solid 2px #7fffe3;
+    border-radius: 3px;
+    margin: 10px auto;
+    margin-left: 90px;
+}
+
+.button:active {
+    -webkit-animation: active 1200ms ease 1 alternate;
+    animation: active 1200ms ease 1 alternate;
+    background: #ff9361;
+}
+
+ 

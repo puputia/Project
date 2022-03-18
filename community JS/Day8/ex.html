@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전광판</title>
+    <script>
+        let h1 = document.getElementsByTagName("h1");
+        let nameStr="코린이동대문";
+        let i=0;
+
+        function showName (s) {
+            if (i < s.length) {
+                h1[0].innerHTML+=s[i];
+                i++;
+            }
+        }
+    </script>
+
+    <style>
+        body {margin-left: 100px auto; text-align: center;}
+        button {height: 50px; width: 150px;border-radius: 50%;}
+    
+    </style>
+</head>
+<body>
+    <body>
+        <h1> <br> </h1>
+        <button onClick="showName(nameStr)">전광판버튼</button>
+       
+    </body>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hooks</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script type="text/babel">
+      //react
+      const rootElement = document.getElementById("root");
+
+      // 공통되는 버튼의 재사용을 위한 버튼 컴포넌트
+      const Button = ({ 
+        color,
+        onClickButton,
+        changeTextColor,
+        addNewArray,
+        array,
+        count, 
+        addCount 
+      }) => {
+
+      // //버튼을 클릭했을때 실행되는 함수 
+      const handleClickButton = (color) => {
+        addCount(count + 1);
+        // 상위컴포넌트의 setTextColor
+
+        changeTextColor(color);
+        // 버튼을 클릭했을때 array 배열에 텍스트를 추가
+
+        const newArray =  array.concat({
+          key: count, 
+          desc: `Click ${color}button`
+        
+        });
+        
+        addNewArray(newArray);
+
+        
+
+      };
+      console.log("count", count);
+
+     
+
+      React.useEffect(()=> {
+        console.log("count is added");
+      }, [count]);
+
+        return(
+          <button
+            onClick={() => handleClickButton(color)}
+            style={{ backgroundColor: color }}
+          >
+            {color}button
+          </button>
+        );
+      };
+       
+
+      function Buttons() {
+        // h1태그의 글자를 바꿔주는 변수값
+        const [textColor, setTextColor] = React.useState("black");
+        const [newState, setNewState] = React.useState([
+          { key: 0, color: "pink"},
+          { key: 1, color: "blue"},
+          { key: 2, color: "green"},
+        ]);
+        const [array, setArray] = React.useState([]);
+        const [count, setCount] = React.useState(0);
+
+
+       
+
+        return (
+          <>
+            {newState.map((button)=> {
+              return (
+              <Button
+                key={button.key} 
+                color={button.color} 
+                changeTextColor={setTextColor}
+                addNewArray={setArray}
+                array = {array}
+                addCount={setCount}
+                count={count}
+              />
+              );
+            })}
+            
+
+            <h1 style={{color: textColor }}>color</h1>
+            {array.map((text, index) => {
+              return <p key={index}>{text.desc}</p>;
+              
+            })}
+            
+          </> 
+        );
+      }
+      const element = <Buttons />;
+
+      ReactDOM.render(element, rootElement);
+ 
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+  </body>
+</html>
